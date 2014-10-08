@@ -1,0 +1,17 @@
+.site-header {
+	width: 100%;
+	background-color: #000;
+	color: $color__background-body;
+}
+.site-branding {
+	@include outer-container;
+	width: 100%;
+}
+.site-title {
+	font-size: $h3-font-size;
+	font-weight: 700;
+	margin-top: $h4-margin-top;
+	margin-bottom: $h4-margin-bottom;
+	line-height: $h4-line-height;
+	@include span-columns(1);
+}

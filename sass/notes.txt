@@ -1,0 +1,35 @@
+//sass command for this project
+sass --watch sass:.
+
+//twenty-fourteen media queries
+@media screen and (max-width: 400px) {}
+
+@media screen and (min-width: 401px) {}
+
+@media screen and (min-width: 594px) {}
+
+@media screen and (min-width: 673px) {}
+
+@media screen and (min-width: 783px) {}
+
+@media screen and (min-width: 810px) {}
+
+@media screen and (min-width: 846px) {}
+
+@media screen and (min-width: 1008px) {}
+
+@media screen and (min-width: 1040px) {}
+
+@media screen and (min-width: 1080px) {}
+
+@media screen and (min-width: 1110px) {}
+
+@media screen and (min-width: 1218px) {}
+
+@media screen and (min-width: 1260px) {}
+
+
+//TO REFACTOR:
+variables-site/variables-site
+typography/copy
+typography/headers

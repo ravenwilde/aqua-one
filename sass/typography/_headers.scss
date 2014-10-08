@@ -1,0 +1,48 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	font-weight: 400;
+	margin: 2.25em 0 .75em;
+}
+
+//headers based on gridlover.net calculations
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin-top: $h1-margin-top;
+  margin-bottom: $h1-margin-bottom;
+  }
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin-top: $h2-margin-top;
+  margin-bottom: $h2-margin-bottom;
+  }
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin-top: $h3-margin-top;
+  margin-bottom: $h3-margin-bottom;
+  }
+
+h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin-top: $h4-margin-top;
+  margin-bottom: $h4-margin-bottom;
+  }
+
+h5 {
+  font-size: 1.125em;
+  line-height: 1.3333333333; }
+
+h6 {
+  font-size: 1em;
+  line-height: 1.5; }
