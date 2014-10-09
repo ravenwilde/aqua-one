@@ -30,6 +30,5 @@ sass --watch sass:.
 
 
 //TO REFACTOR:
-variables-site/variables-site
 typography/copy
 typography/headers

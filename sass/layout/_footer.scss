@@ -1,16 +1,10 @@
-.site-header {
-	@include span-columns(3);
+.site-footer {
+	@include span-columns(12);
+	@include row;
 	@include media($tablet) {
 	  @include span-columns(8);
 	}
 	@include media($mobile) {
 	  @include span-columns(4);
 	}
-}
-.site-branding {
-	
-}
-.site-title {
-	
-	
 }
