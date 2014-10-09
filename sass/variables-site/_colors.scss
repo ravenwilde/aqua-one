@@ -1,20 +1,70 @@
-$color__background-body: #fff;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
+//foundation 5 greyscale
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
 
-$color__text-screen: #21759b;
-$color__text-input: #666;
-$color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
+$greyscale: (
+	$white,
+	$ghost,
+	$snow,
+	$vapor,
+	$white-smoke,
+	$silver,
+	$smoke,
+	$gainsboro,
+	$iron,
+	$base,
+	$aluminum,
+	$jumbo,
+	$monsoon,
+	$steel,
+	$charcoal,
+	$tuatara,
+	$oil,
+	$jet,
+	$black
+);
 
-$color__border-button: #ccc #ccc #bbb;
-$color__border-button-hover: #ccc #bbb #aaa;
-$color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
-$color__border-abbr: #666;
+//kuler theme aqua-1
+$chathams-blue: #184774;
+$jelly-bean: #23768E;
+$emerald: #38D64E;
+$dawn-pink: #F4EEE6;
+$rangoon-green: #0C0F0B;
+
+$color__background-body: $white;
+$color__background-screen: $ghost;
+$color__background-hr: $iron;
+$color__background-button: $gainsboro;
+$color__background-pre: $smoke;
+$color__background-ins: $vapor;
+
+$color__text-screen: $rangoon-green;
+$color__text-input: $steel;
+$color__text-input-focus: $jet;
+$color__link: $jelly-bean;
+$color__link-visited: $chathams-blue;
+$color__link-hover: darken($jelly-bean, 20%);
+$color__text-main: $tuatara;
+
+$color__border-button: $iron $iron mix($iron, $base);
+$color__border-button-hover: $iron mix($iron, $base) $base;
+$color__border-button-focus: $base mix($iron, $base) mix($iron, $base);
+$color__border-input: $iron;
+$color__border-abbr: $steel;

@@ -31,4 +31,3 @@ sass --watch sass:.
 
 //TO REFACTOR:
 typography/copy
-typography/headers

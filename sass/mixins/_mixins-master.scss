@@ -34,3 +34,16 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+//Color Scheme Mixins
+
+@mixin blue-background() {
+	background-color: $chathams-blue;
+	color: lighten($dawn-pink, 5%);
+	a {
+		color: lighten($dawn-pink, 5%);
+	}
+}
+
+
+

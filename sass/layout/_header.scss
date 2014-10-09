@@ -1,4 +1,7 @@
 .site-header {
+
+	@include blue-background;
+
 	@include span-columns(4);
 	
 	@include media($tablet) {
@@ -6,10 +9,12 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(3);
+	  height: 100%;
 	}
 	@include media($lg-desktop) {
 	  @include span-columns(2);
 	}
+
 	
 }
 .site-branding {
