@@ -6,11 +6,16 @@ $visual-grid-opacity: 0.4 !default;
 
 $column: golden-ratio(1em, 3) !global;
 $gutter: golden-ratio(1em, 1) !global;
-$grid-columns: 12 !default;
+$grid-columns: 4 !global;
 $max-width: 100%;
 
-$tablet: new-breakpoint(max-width 768px 8);
+$tablet: new-breakpoint(min-width 480px 8);
 
-$mobile: new-breakpoint(max-width 480px 4);
+$sm-desktop: new-breakpoint(min-width 768px 12);
 
-//$desktop: new-breakpoint(max-width rem(1088) 12);
+$lg-desktop: new-breakpoint(min-width 1088px 12);
+
+
+
+
+
