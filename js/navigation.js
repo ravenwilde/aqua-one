@@ -5,12 +5,16 @@
  */
 ( function() {
 	var container, button, menu;
+	
+	header = document.getElementById( 'masthead' );
+	if ( ! header )
+		return;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container )
 		return;
 
-	button = container.getElementsByTagName( 'button' )[0];
+	button = header.getElementsByTagName( 'button' )[0];
 	if ( 'undefined' === typeof button )
 		return;
 

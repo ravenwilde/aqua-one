@@ -67,11 +67,26 @@
 }
 
 @media screen and (max-width: 600px) {
+
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
 		display: block;
 	}
-
+	.menu-toggle {
+		@include debutton;
+		display: inline;
+		color: lighten($dawn-pink, 5%);
+		font-size: 1.5rem;
+		line-height: 1;
+		margin: .8rem 0;
+		padding:0;
+		float: right;
+		span.fi-list {
+			font-size:3rem;
+			vertical-align: middle;
+			margin-left:.5rem;
+		}
+	}
 	.main-navigation ul {
 		display: none;
 	}
