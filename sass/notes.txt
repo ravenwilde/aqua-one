@@ -30,7 +30,10 @@ sass --watch sass:.
 
 
 //TO REFACTOR:
-typography/copy
+typography/copy //styles from twentyfourteen
 
 //TO TEST:
 debutton mixin styles in browsers other than chrome
+
+//TO DO:
+javascript to make menu hamburger transform happen
