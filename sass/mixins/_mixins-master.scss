@@ -1,3 +1,5 @@
+@import "burger";
+
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1.6) {
 	font-size: ($sizeValue * 10) + px;
@@ -46,4 +48,30 @@
 }
 
 
+// DEBUTTON - strip a button element of all native browser styles
 
+@mixin debutton() {
+	border: 0;
+	border-color: transparent;
+	background-clip: padding-box;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	text-shadow: none;
+	$states: (hover, active, focus);
+	@each $state in $states {
+		&:#{$state} {
+			background: transparent;
+			box-shadow: none;
+			text-shadow: none;
+			border: 0;
+			border-color: transparent;
+			outline-color: transparent;
+			outline-width: 0;
+			outline-style: none;
+			}
+	}
+}

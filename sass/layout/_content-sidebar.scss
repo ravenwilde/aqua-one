@@ -24,6 +24,7 @@
 }
 
 .content-area {
+	padding: 0 golden-ratio(1em, -1);
 	@include span-columns(4 of 4);
 
 	@include media($tablet) {
@@ -31,14 +32,17 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(6 of 9);
+	  
 	}	
 	@include media($lg-desktop){
 		@include span-columns(6 of 10);
+		padding: 0 golden-ratio(1em, 1);
 	}
 	
 }
 
 .site-content .widget-area {
+	padding: 0 golden-ratio(1em, -1);
 	@include span-columns(4 of 4);
 	
 	@include media($tablet) {
@@ -46,9 +50,11 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(3 of 9);
+	  
 	}
 	@include media($lg-desktop) {
 		@include span-columns(4 of 10);
+		padding: 0 golden-ratio(1em, 1);
 	}
 	
 }
