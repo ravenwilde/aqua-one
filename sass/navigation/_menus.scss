@@ -3,6 +3,8 @@
 	display: block;
 	float: left;
 	width: 100%;
+	text-transform: uppercase;
+	font-size: 1.125rem;
 
 	ul {
 		list-style: none;
@@ -10,26 +12,33 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
+			//margin-top: golden-ratio(1rem, -1);
+			//box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			//float: left;
+			//position: absolute;
+			//top: 1.5em;
+			//left: -999em;
+			//z-index: 99999;
+			//background-color: lighten($chathams-blue, 5%);
 
 			ul {
-				left: -999em;
-				top: 0;
+				//left: -999em;
+				//top: 0;
 			}
 
 			li {
+				//border: none;
+				&:last-child {
+					padding-bottom: 0;
+				}
 				&:hover > ul {
-					left: 100%;
+					//left: 100%;
 				}
 			}
 
 			a {
-				width: 200px;
+				//width: 200px;
+				padding-left: golden-ratio(1rem, 2);
 			}
 
 			:hover > a {
@@ -40,19 +49,23 @@
 		}
 
 		li:hover > ul {
-			left: auto;
+			//left: auto;
 		}
 	}
 	li {
-		float: left;
+		//float: left;
 		position: relative;
-
+		display: block;
+		width: 100%;
+		//padding: golden-ratio(1rem, -1) golden-ratio(1rem, -1) golden-ratio(1rem, -1) golden-ratio(1rem, 1);
+		border-top: lighten($chathams-blue, 5%) 1px solid;
 		&:hover > a {
 		}
 	}
 	a {
 		display: block;
 		text-decoration: none;
+		padding: golden-ratio(1rem, -1) golden-ratio(1rem, -1) golden-ratio(1rem, -1) golden-ratio(1rem, 1);
 	}
 
 	.current_page_item > a,
@@ -66,7 +79,7 @@
 	display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 899px) {
 
 	.menu-toggle,
 	.main-navigation.toggled .nav-menu {
@@ -75,20 +88,47 @@
 	.menu-toggle {
 		@include debutton;
 		display: inline;
+		display: inline-flex;
 		color: lighten($dawn-pink, 5%);
 		font-size: 1.5rem;
 		line-height: 1;
-		margin: .8rem 0;
+		margin: golden-ratio(1rem, 1) golden-ratio(1em, -1) 0;
 		padding:0;
 		float: right;
-		span.fi-list {
-			font-size:3rem;
-			vertical-align: middle;
-			margin-left:.5rem;
+		// span.fi-list {
+		// 	font-size:3rem;
+		// 	vertical-align: middle;
+		// 	margin-left:.5rem;
+		// }
+		
+		span {
+			@include burger(25px, 3px, 5px, #fff);
+			display: inline-block;
+			margin-left: 1rem;
 		}
+		&.is-active span {
+			@include burger-to-cross;
+		}
+		 
 	}
 	.main-navigation ul {
 		display: none;
+	}
+	.main-navigation.toggled {
+		border-top: lighten($chathams-blue, 5%) 1px solid;
+		font-size: 1.25rem;
+		ul {
+			li {
+				display: block;
+				width: 100%;
+				border-bottom: lighten($chathams-blue, 5%) 1px solid;
+				a {
+					width: 100%;
+					height: 100%;
+					padding: golden-ratio(1rem,-1) golden-ratio(1em, -1);
+				}
+			}
+		}
 	}
 }
 

@@ -4,7 +4,7 @@
  * Handles toggling the navigation menu for small screens.
  */
 ( function() {
-	var container, button, menu;
+	var header, container, button, menu;
 	
 	header = document.getElementById( 'masthead' );
 	if ( ! header )
@@ -32,7 +32,9 @@
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) )
 			container.className = container.className.replace( ' toggled', '' );
+			//button.className = button.className.replace(' is-active', '');
 		else
 			container.className += ' toggled';
+			//button.className += ' is-active';
 	};
 } )();

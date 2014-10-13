@@ -1,5 +1,5 @@
 .site-header {
-	padding: 0 golden-ratio(1em, -1);
+	
 	@include blue-background;
 
 	@include span-columns(4);
@@ -10,7 +10,7 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(3);
-	  padding: 0 golden-ratio(1em, 1);
+	  
 	  height: 100%;
 	}
 	@include media($lg-desktop) {
@@ -22,9 +22,11 @@
 .site-branding {
 	float: left;
 	width: 70%;
+	padding: 0 0 0 golden-ratio(1em, -1);
 	@include media($sm-desktop) {	
-	
-
+		width:100%;
+		padding: 0 golden-ratio(1em, 1);
+		text-align: center;
 	}
 }
 .site-title {
