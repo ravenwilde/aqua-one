@@ -133,3 +133,43 @@ function aqua_one_category_transient_flusher() {
 }
 add_action( 'edit_category', 'aqua_one_category_transient_flusher' );
 add_action( 'save_post',     'aqua_one_category_transient_flusher' );
+/**
+ * Display an optional post thumbnail.
+ *
+ * Wraps the post thumbnail in an anchor element on index
+ * views, or a div element when on single views.
+ *
+ * Copied from Twenty Fourteen and modified for use here.
+ */
+function aqua_one_post_thumbnail() {
+	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		return;
+	}
+
+	if ( is_singular() ) :
+	?>
+
+	<div class="post-thumbnail">
+	<?php
+		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
+			the_post_thumbnail( 'aqua-one-full-width' );
+		} else {
+			the_post_thumbnail();
+		}
+	?>
+	</div>
+
+	<?php else : ?>
+
+	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+	<?php
+		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
+			the_post_thumbnail( 'aqua-one-full-width' );
+		} else {
+			the_post_thumbnail();
+		}
+	?>
+	</a>
+
+	<?php endif; // End is_singular()
+}
