@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<!-- THIS IS AN IMAGE TYPE TEMPLATE -->
+	<!-- GENERATED WITH CONTENT-IMAGE.PHP -->
 	<header class="entry-header">
 		<div class="post-thumbnail"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></div>
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
