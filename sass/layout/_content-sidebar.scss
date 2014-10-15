@@ -1,12 +1,14 @@
 #page {
 	@include outer-container;
 	height: 100%;
+	min-height: 100%;
 }
 .content-area {
 	
 }
 
 .site-content {
+	padding: 0;
 	@include span-columns(4);
 
 	@include media($tablet) {
@@ -32,11 +34,12 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(6 of 9);
-	  
+	  height: 84%;
 	}	
 	@include media($lg-desktop){
 		@include span-columns(6 of 10);
 		padding: 0 golden-ratio(1em, 1);
+		height: 84%;
 	}
 	
 }
@@ -50,10 +53,12 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(3 of 9);
+	  height: 84%;
 	  
 	}
 	@include media($lg-desktop) {
 		@include span-columns(4 of 10);
+		height: 84%;
 		padding: 0 golden-ratio(1em, 1);
 	}
 	

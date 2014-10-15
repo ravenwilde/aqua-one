@@ -170,10 +170,6 @@ textarea {
   line-height: 1.618;
   font-weight: 400; }
 
-.entry-title {
-  text-transform: uppercase;
-  font-weight: 400; }
-
 h1,
 h2,
 h3,
@@ -748,7 +744,8 @@ a {
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%;
-      height: 100%; }
+      height: 100%;
+      min-height: 100vh; }
       .site-header:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 1100px) {
@@ -791,9 +788,11 @@ a {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  height: 100%; }
+  height: 100%;
+  min-height: 100%; }
 
 .site-content {
+  padding: 0;
   float: left;
   display: block;
   margin-right: 7.42297%;
@@ -848,7 +847,8 @@ a {
       float: left;
       display: block;
       margin-right: 3.16844%;
-      width: 65.61052%; }
+      width: 65.61052%;
+      height: 84%; }
       .content-area:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 1100px) {
@@ -857,7 +857,8 @@ a {
       display: block;
       margin-right: 2.84259%;
       width: 58.86297%;
-      padding: 0 1.618em; }
+      padding: 0 1.618em;
+      height: 84%; }
       .content-area:last-child {
         margin-right: 0; } }
 
@@ -882,7 +883,8 @@ a {
       float: left;
       display: block;
       margin-right: 3.16844%;
-      width: 31.22104%; }
+      width: 31.22104%;
+      height: 84%; }
       .site-content .widget-area:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 1100px) {
@@ -891,6 +893,7 @@ a {
       display: block;
       margin-right: 2.84259%;
       width: 38.29445%;
+      height: 84%;
       padding: 0 1.618em; }
       .site-content .widget-area:last-child {
         margin-right: 0; } }
@@ -934,6 +937,10 @@ a {
 /*--------------------------------------------------------------
 10.2 Posts and pages
 --------------------------------------------------------------*/
+.entry-title {
+  text-transform: uppercase;
+  font-weight: 400; }
+
 .sticky {
   display: block; }
 
@@ -951,7 +958,7 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0; }
 
 .page-links {
   clear: both;
