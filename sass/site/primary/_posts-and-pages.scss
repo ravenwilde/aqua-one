@@ -1,3 +1,15 @@
+//post titles
+
+%post-headline {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.entry-title {
+  @extend %post-headline;
+  //display: inline-block;
+}
+
 .sticky {
 	display: block;
 }
@@ -19,7 +31,8 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	//margin: 1.5em 0 0;
+	margin: 0;
 }
 
 .page-links {

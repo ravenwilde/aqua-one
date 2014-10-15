@@ -1,16 +1,14 @@
 <?php
 /**
- * The template part for displaying results in search pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
  * @package AquaOne
  */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<!-- GENERATED WITH CONTENT-SEARCH.PHP -->
+<!-- GENERATED WITH CONTENT-LINK.PHP -->
 	<header class="entry-header">
+		<?php aqua_one_post_thumbnail(); ?>
+
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -20,9 +18,15 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	<div class="entry-content">
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'aqua-one' ) ); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'aqua-one' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
