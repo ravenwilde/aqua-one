@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: AquaOne
 Theme URI: http://underscores.me/
@@ -50,6 +51,12 @@ and Blueprint http://www.blueprintcss.org/
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: "foundation-icons";
+  src: url("fonts/foundation-icons.eot");
+  src: url("fonts/foundation-icons.eot?#iefix") format("embedded-opentype"), url("fonts/foundation-icons.woff") format("woff"), url("fonts/foundation-icons.ttf") format("truetype"), url("fonts/foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 /* vars from http://www.gridlover.net/ */
 /**
  * Burger parts
@@ -75,7 +82,8 @@ body {
 1.0 - Reset
 --------------------------------------------------------------*/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1,
+.format-link .entry-content p:first-child, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -170,7 +178,7 @@ textarea {
   line-height: 1.618;
   font-weight: 400; }
 
-h1,
+h1, .format-link .entry-content p:first-child,
 h2,
 h3,
 h4,
@@ -180,7 +188,7 @@ h6 {
   font-weight: 400;
   margin: 2.25em 0 .75em; }
 
-h1 {
+h1, .format-link .entry-content p:first-child {
   font-size: 2.375rem;
   line-height: 3.25rem;
   margin-top: 3.25rem;
@@ -705,6 +713,7 @@ a {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
+  background-color: #FAFAFA;
   /* Make sure select elements fit in widgets */ }
   .widget select {
     max-width: 100%; }
@@ -744,6 +753,7 @@ a {
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%;
+      margin-right: 0;
       height: 100%;
       min-height: 100vh; }
       .site-header:last-child {
@@ -753,7 +763,8 @@ a {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 14.70196%; }
+      width: 14.70196%;
+      margin-right: 0; }
       .site-header:last-child {
         margin-right: 0; } }
 
@@ -789,10 +800,12 @@ a {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
-  min-height: 100%; }
+  min-height: 100%;
+  background-color: #f5f4f2; }
 
 .site-content {
   padding: 0;
+  height: 100%;
   float: left;
   display: block;
   margin-right: 7.42297%;
@@ -827,11 +840,11 @@ a {
         margin-right: 0; } }
 
 .content-area {
-  padding: 0 0.61805em;
   float: left;
   display: block;
   margin-right: 7.42297%;
-  width: 100%; }
+  width: 100%;
+  background-color: #FFFFFF; }
   .content-area:last-child {
     margin-right: 0; }
   @media screen and (min-width: 480px) {
@@ -848,7 +861,7 @@ a {
       display: block;
       margin-right: 3.16844%;
       width: 65.61052%;
-      height: 84%; }
+      height: 100%; }
       .content-area:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 1100px) {
@@ -857,10 +870,14 @@ a {
       display: block;
       margin-right: 2.84259%;
       width: 58.86297%;
-      padding: 0 1.618em;
-      height: 84%; }
+      height: 100%; }
       .content-area:last-child {
         margin-right: 0; } }
+  .content-area article {
+    padding: 1.618rem 0.61805rem; }
+    @media screen and (min-width: 1100px) {
+      .content-area article {
+        padding: 1.618rem 1.618rem; } }
 
 .site-content .widget-area {
   padding: 0 0.61805em;
@@ -941,15 +958,45 @@ a {
   text-transform: uppercase;
   font-weight: 400; }
 
+.entry-title,
+.entry-meta,
+.entry-content,
+.entry-footer {
+  padding: 0 2.61792rem; }
+  @media screen and (min-width: 1100px) {
+    .entry-title,
+    .entry-meta,
+    .entry-content,
+    .entry-footer {
+      padding: 0 2.61792rem; } }
+
+.has-post-thumbnail .entry-header {
+  position: relative; }
+.has-post-thumbnail .entry-title {
+  position: absolute;
+  z-index: 50;
+  bottom: 3rem; }
+  .has-post-thumbnail .entry-title a {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: 1.375em;
+    font-weight: 300; }
+
 .sticky {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  border-bottom: 4px solid #f5f4f2; }
 
 .byline,
 .updated:not(.published) {
   display: none; }
+
+.cat-links {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 0.75em;
+  line-height: 1em; }
 
 .single .byline,
 .group-blog .byline {
@@ -960,9 +1007,96 @@ a {
 .entry-summary {
   margin: 0; }
 
+.entry-meta {
+  margin: 0.5rem 0; }
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.entry-footer {
+  width: 100%;
+  border-top: 1px solid #f5f4f2;
+  content: "";
+  display: table; }
+  .entry-footer .cat-links {
+    display: block; }
+  .entry-footer .post-format,
+  .entry-footer .posted-on,
+  .entry-footer .byline,
+  .entry-footer .comments-link,
+  .entry-footer .edit-link {
+    display: inline-block;
+    margin: 0.61805rem 0.61805rem 0.61805rem 0;
+    float: left; }
+  .entry-footer .comments-link {
+    clear: both; }
+
+.posted-on a:before {
+  font-family: "foundation-icons";
+  content: "";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  margin-left: 0;
+  margin-right: .2em; }
+
+.byline a:before {
+  font-family: "foundation-icons";
+  content: "";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  margin-left: 0;
+  margin-right: .2em; }
+
+.comments-link a:before {
+  font-family: "foundation-icons";
+  content: "";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  margin-left: 0;
+  margin-right: .2em; }
+
+.format-link .entry-title {
+  display: none; }
+.format-link .entry-meta {
+  margin-top: 1rem; }
+.format-link .entry-content p:first-child {
+  margin-top: .625rem; }
+  .format-link .entry-content p:first-child:after {
+    content: "→";
+    margin-left: .3em;
+    margin-right: .3em; }
+.format-link .entry-format:before {
+  font-family: "foundation-icons";
+  content: "";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  margin-left: 0;
+  margin-right: .2em; }
 
 /*--------------------------------------------------------------
 10.3 Asides

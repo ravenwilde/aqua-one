@@ -10,13 +10,14 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(3);
-	  
+	  @include omega;
 	  height: 100%;
 	  min-height: 100vh;
 	  
 	}
 	@include media($lg-desktop) {
 	  @include span-columns(2);
+	  @include omega;
 	}
 
 	

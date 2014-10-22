@@ -10,17 +10,65 @@
   //display: inline-block;
 }
 
+//layout
+
+.entry-title,
+.entry-meta, 
+.entry-content, 
+.entry-footer {
+	//padding: 0 golden-ratio(1rem, -1);
+	padding: 0 golden-ratio(1rem, 2);
+	@include media($lg-desktop){
+		padding: 0 golden-ratio(1rem, 2);
+	
+	}
+}
+
+//has thumbnail
+
+.has-post-thumbnail {
+	.entry-header {
+		position: relative;
+	}
+	.post-thumbnail {
+		//padding: 0 golden-ratio(1rem, 1);
+	}
+	.entry-title {
+		position: absolute;
+		z-index:50;
+		bottom: 3rem;
+		a {
+			color: $white;
+			text-shadow: 2px 2px 4px transparentize($black, .2);
+			font-size: em(22px);
+			font-weight:300;
+		}
+
+	}
+}
+
 .sticky {
 	display: block;
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	//padding: 1.5em 0;
+	border-bottom: 4px solid $dawn-grey;
+	&:first-child {
+		//margin-top: 1.5em;
+	}
 }
 
 .byline,
 .updated:not(.published){
 	display: none;
+}
+
+.cat-links {
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: em(12px);
+	line-height: em(16px);
 }
 
 .single .byline,
@@ -35,7 +83,93 @@
 	margin: 0;
 }
 
+.entry-meta {
+	margin: rem(8px) 0;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.entry-footer {
+	width: 100%;
+	border-top: 1px solid $dawn-grey;
+	@include clearfix;
+	.cat-links {
+		display:block;
+	}
+	.post-format,
+	.posted-on,
+	.byline,
+	.comments-link,
+	.edit-link {
+		display: inline-block;
+		margin: golden-ratio(1rem, -1) golden-ratio(1rem, -1) golden-ratio(1rem, -1) 0;
+		float: left;
+	}
+	.comments-link {
+		@include clearfix-after;
+	}
+}
+
+.posted-on {
+	a:before {
+			@include foundation-icon("\f124");
+			margin-left: 0;
+			margin-right: .2em;
+		}
+}
+.byline {
+	a:before {
+			@include foundation-icon("\f1fe");
+			margin-left: 0;
+			margin-right: .2em;
+		}
+}
+.comments-link {
+	a:before {
+			@include foundation-icon("\f132");
+			margin-left: 0;
+			margin-right: .2em;
+		}
+}
+
+// post format LINK
+
+.format-link {
+	.entry-title {
+		display: none;
+	}
+	.entry-meta {
+		margin-top: 1rem;
+	}
+	.entry-content p:first-child {
+		@extend h1;
+		margin-top: .625rem;
+		&:after {
+			//@include foundation-icon;
+			content: "→";
+			margin-left: .3em;
+			margin-right: .3em;
+			//color: $dawn-grey;
+		}
+	}
+	.entry-format {
+		&:before {
+			@include foundation-icon("\f165");
+			margin-left: 0;
+			margin-right: .2em;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

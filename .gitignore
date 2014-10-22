@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+.sass-cache
+/sass/.DS_Store
+/sass/.sass-cache
+/sass/bourbon
+/sass/neat
