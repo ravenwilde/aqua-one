@@ -2,13 +2,13 @@
 	@include outer-container;
 	height: 100%;
 	min-height: 100%;
+	background-color: $dawn-grey;
 }
-.content-area {
-	
-}
+
 
 .site-content {
 	padding: 0;
+	height: 100%;
 	@include span-columns(4);
 
 	@include media($tablet) {
@@ -26,7 +26,7 @@
 }
 
 .content-area {
-	padding: 0 golden-ratio(1em, -1);
+	
 	@include span-columns(4 of 4);
 
 	@include media($tablet) {
@@ -34,18 +34,30 @@
 	}
 	@include media($sm-desktop) {
 	  @include span-columns(6 of 9);
-	  height: 84%;
+	  height: 100%;
 	}	
 	@include media($lg-desktop){
 		@include span-columns(6 of 10);
-		padding: 0 golden-ratio(1em, 1);
-		height: 84%;
+		height: 100%;
 	}
+
+	article {
+		background-color: $white;
+		padding: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
+		margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
+		
+		@include media($lg-desktop) {
+			padding: golden-ratio(1rem, 1) golden-ratio(1rem, 1);
+			margin: golden-ratio(1rem, 1) golden-ratio(1rem, 1);
+		}
+	}
+
 	
+
 }
 
 .site-content .widget-area {
-	padding: 0 golden-ratio(1em, -1);
+	
 	@include span-columns(4 of 4);
 	
 	@include media($tablet) {
@@ -59,7 +71,7 @@
 	@include media($lg-desktop) {
 		@include span-columns(4 of 10);
 		height: 84%;
-		padding: 0 golden-ratio(1em, 1);
+		
 	}
 	
 }
