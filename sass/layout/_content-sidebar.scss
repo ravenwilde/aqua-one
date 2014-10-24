@@ -42,18 +42,22 @@
 	}
 
 	article {
+		background-color: $white;
 		padding: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
+		margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
+		
 		@include media($lg-desktop) {
 			padding: golden-ratio(1rem, 1) golden-ratio(1rem, 1);
+			margin: golden-ratio(1rem, 1) golden-ratio(1rem, 1);
 		}
 	}
 
-	background-color: $white;
+	
 
 }
 
 .site-content .widget-area {
-	padding: 0 golden-ratio(1em, -1);
+	
 	@include span-columns(4 of 4);
 	
 	@include media($tablet) {
@@ -67,7 +71,7 @@
 	@include media($lg-desktop) {
 		@include span-columns(4 of 10);
 		height: 84%;
-		padding: 0 golden-ratio(1em, 1);
+		
 	}
 	
 }

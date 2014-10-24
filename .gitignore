@@ -2,6 +2,10 @@
 Thumbs.db
 .sass-cache
 /sass/.DS_Store
-/sass/.sass-cache
-/sass/bourbon
-/sass/neat
+.sass-cache
+.sass-cache/*
+.sass-cache/**
+.sass-cache
+*.css.map
+/sass/bourbon/*
+/sass/neat/*

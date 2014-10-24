@@ -28,7 +28,7 @@
 	padding: 0 0 0 golden-ratio(1em, -1);
 	@include media($sm-desktop) {	
 		width:100%;
-		padding: 0 golden-ratio(1em, 1);
+		padding: golden-ratio(1rem, 1) golden-ratio(1em, 1) 0 golden-ratio(1rem, 1);
 		text-align: center;
 	}
 }
@@ -36,8 +36,8 @@
 	font-size: em(18);
 	margin-top: golden-ratio(18px, -2);
 	margin-bottom: golden-ratio(18px, -2);
-	@media($sm-desktop) {
-		margin-top: $h1-margin-top;
+	@include media($sm-desktop) {
+		margin-top: 0;
 	}
 }
 .site-description {
