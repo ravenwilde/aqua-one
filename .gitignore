@@ -1,11 +1,5 @@
+# Apple crap
 .DS_Store
-Thumbs.db
+# Sass cache folder
 .sass-cache
-/sass/.DS_Store
-.sass-cache
-.sass-cache/*
-.sass-cache/**
-.sass-cache
-*.css.map
-/sass/bourbon/*
-/sass/neat/*
+sass/.sass-cache
