@@ -39,6 +39,7 @@ function aqua_one_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 675, 417, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -92,7 +93,7 @@ add_action( 'widgets_init', 'aqua_one_widgets_init' );
  * Enqueue scripts and styles.
  */
 function aqua_one_scripts() {
-	wp_enqueue_style('foundation-icons', get_template_directory_uri() . '/fonts/foundation-cons.css');
+	
 	wp_enqueue_style( 'aqua-one-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'aqua-one-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );

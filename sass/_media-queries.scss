@@ -4,12 +4,12 @@
 //$visual-grid: true !global;
 //$visual-grid-opacity: 0.4 !default;
 
-$column: golden-ratio(1em, 3) !global;
-$gutter: golden-ratio(1em, 1) !global;
+$column: golden-ratio(1em, 6) !global;
+$gutter: golden-ratio(1em, -6) !global;
 $grid-columns: 4 !global;
 $max-width: 100%;
 
-$tablet: new-breakpoint(min-width 480px 8);
+$tablet: new-breakpoint(min-width 700px 8);
 
 $sm-desktop: new-breakpoint(min-width 900px 12);
 
