@@ -79,12 +79,12 @@ function aqua_one_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'aqua-one' ),
+		_x( '%s', 'post date', 'aqua-one' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		_x( 'by %s', 'post author', 'aqua-one' ),
+		_x( '%s', 'post author', 'aqua-one' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -151,7 +151,7 @@ function aqua_one_post_thumbnail() {
 
 	<div class="post-thumbnail">
 	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
+		if ( ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
 			the_post_thumbnail( 'aqua-one-full-width' );
 		} else {
 			the_post_thumbnail();
@@ -163,7 +163,7 @@ function aqua_one_post_thumbnail() {
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 	<?php
-		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
+		if ( ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
 			the_post_thumbnail( 'aqua-one-full-width' );
 		} else {
 			the_post_thumbnail();

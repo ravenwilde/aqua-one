@@ -1,0 +1,5 @@
+# Apple crap
+.DS_Store
+# Sass cache folder
+.sass-cache
+sass/.sass-cache
