@@ -8,7 +8,7 @@
 
 .site-content {
 	padding: 0;
-	height: 100%;
+	//height: 100%;
 	@include span-columns(4);
 
 	@include media($tablet) {
@@ -45,7 +45,13 @@
 		background-color: $white;
 		padding: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
 		margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
-		
+		box-shadow: 3px 5px 0 transparentize($rangoon-green, .99);
+		@include media($tablet) {
+			margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1) golden-ratio(1rem, 1) golden-ratio(1rem, 1);
+		}
+		@include media($sm-desktop) {
+			margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1) golden-ratio(1rem, 1) golden-ratio(1rem, 1);
+		}
 		@include media($lg-desktop) {
 			padding: golden-ratio(1rem, 1) golden-ratio(1rem, 1);
 			margin: golden-ratio(1rem, 1) golden-ratio(1rem, 1);

@@ -715,9 +715,16 @@ a {
   padding: 1.618rem 0.61805rem;
   margin: 1.618rem 0.61805rem 1.618rem 0.61805rem;
   background-color: #FAFAFA;
+  box-shadow: 3px 5px 0 rgba(12, 15, 11, 0.01);
   /* Make sure select elements fit in widgets */ }
   .widget select {
     max-width: 100%; }
+  @media screen and (min-width: 700px) {
+    .widget {
+      margin: 1.618rem 1.618rem 1.618rem 0.61805rem; } }
+  @media screen and (min-width: 900px) {
+    .widget {
+      margin: 1.618rem 1.618rem 1.618rem 0.61805rem; } }
   @media screen and (min-width: 1100px) {
     .widget {
       padding: 1.618rem 1.618rem;
@@ -776,10 +783,16 @@ a {
 .site-branding {
   float: left;
   width: 70%;
-  padding: 0 0 0 0.61805em; }
+  margin: 0 0 0 1.23609rem;
+  padding: 0 0 0 1.618rem; }
+  @media screen and (min-width: 700px) {
+    .site-branding {
+      margin: 0 0 0 3.236rem;
+      padding: 0 0 0 0.61805rem; } }
   @media screen and (min-width: 900px) {
     .site-branding {
       width: 100%;
+      margin: 0;
       padding: 1.618rem 1.618em 0 1.618rem;
       text-align: center; } }
 
@@ -810,7 +823,6 @@ a {
 
 .site-content {
   padding: 0;
-  height: 100%;
   float: left;
   display: block;
   margin-right: 0.07748%;
@@ -880,7 +892,14 @@ a {
   .content-area article {
     background-color: #FFFFFF;
     padding: 1.618rem 0.61805rem;
-    margin: 1.618rem 0.61805rem; }
+    margin: 1.618rem 0.61805rem;
+    box-shadow: 3px 5px 0 rgba(12, 15, 11, 0.01); }
+    @media screen and (min-width: 700px) {
+      .content-area article {
+        margin: 1.618rem 0.61805rem 1.618rem 1.618rem; } }
+    @media screen and (min-width: 900px) {
+      .content-area article {
+        margin: 1.618rem 0.61805rem 1.618rem 1.618rem; } }
     @media screen and (min-width: 1100px) {
       .content-area article {
         padding: 1.618rem 1.618rem;
@@ -967,7 +986,7 @@ a {
 .entry-meta,
 .entry-content,
 .entry-footer {
-  padding: 0 2.61792rem; }
+  padding: 0 1.618rem; }
   @media screen and (min-width: 1100px) {
     .entry-title,
     .entry-meta,

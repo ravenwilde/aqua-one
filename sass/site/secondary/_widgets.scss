@@ -1,12 +1,18 @@
 .widget {
 	padding: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
 	margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1) golden-ratio(1rem, 1) golden-ratio(1rem, -1);
-	//margin: 0 0 1.5em;
 	background-color: $ghost;
+	box-shadow: 3px 5px 0 transparentize($rangoon-green, .99);
 
 	/* Make sure select elements fit in widgets */
 	select {
 		max-width: 100%;
+	}
+	@include media($tablet) {
+		margin: golden-ratio(1rem, 1) golden-ratio(1rem, 1) golden-ratio(1rem, 1) golden-ratio(1rem, -1);
+	}
+	@include media($sm-desktop) {
+		margin: golden-ratio(1rem, 1) golden-ratio(1rem, 1) golden-ratio(1rem, 1) golden-ratio(1rem, -1);
 	}
 
 	@include media($lg-desktop) {
