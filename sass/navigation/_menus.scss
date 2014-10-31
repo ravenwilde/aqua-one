@@ -136,7 +136,10 @@
 .site-main .paging-navigation,
 .site-main .post-navigation {
 	margin: 0 0 1.5em;
+	padding: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
 	overflow: hidden;
+	background-color: $white;
+	box-shadow: 3px 5px 0 transparentize($rangoon-green, .99);
 }
 
 .comment-navigation .nav-previous,

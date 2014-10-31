@@ -24,9 +24,14 @@
 }
 .site-branding {
 	float: left;
-	width: 70%;
-	margin: 0 0 0 (golden-ratio(1rem, -1) * 2);
-	padding: 0 0 0 golden-ratio(1rem, 1);
+	width: 50%;
+	margin: 0 0 0 golden-ratio(1rem, -1);
+	//padding: 0 0 0 golden-ratio(1rem, 1);
+	@include media($lg-mobile) {
+		width: 70%;
+		margin: 0 0 0 (golden-ratio(1rem, -1) * 2);
+		padding: 0 0 0 golden-ratio(1rem, 1);
+	}
 	@include media($tablet) {
 		margin: 0 0 0 (golden-ratio(1rem, 1) * 2);
 		padding: 0 0 0 golden-ratio(1rem, -1);
@@ -47,10 +52,13 @@
 	}
 }
 .site-description {
+	display: none;
 	margin-top: 0;
 	font-size: em(12);
 	font-weight: 400;
 	line-height: 1.5;
 	color: mix(lighten($dawn-pink, 5%), $chathams-blue, 50%);
-
+	@include media($lg-mobile) {
+		display: block;
+	}
 }

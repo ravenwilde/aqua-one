@@ -13,7 +13,23 @@ img {
 }
 
 figure {
-	margin: 0;
+	background-color: $dawn-grey;
+	color: darken($dawn-grey, 60%);
+	border: 1px solid darken($dawn-grey, 5%);
+	padding: golden-ratio(1rem, -1);
+	font-size: .85em;
+	margin: 0 0 $base-line-height;
+	
+	&.alignleft,
+	&.alignright {
+		@include center-block;
+		float: none;
+		margin-bottom: $base-line-height;
+	}
+}
+figure + * {
+	clear: both;
+
 }
 
 @import "tables";

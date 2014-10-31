@@ -11,17 +11,20 @@
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'aqua-one' ) );
-				if ( $categories_list && aqua_one_categorized_blog() ) :
-				?>
-				<span class="cat-links">
-					<?php printf( __( '%1$s', 'aqua-one' ), $categories_list ); ?>
-				</span>
-				<?php endif; // End if categories ?>
-			</div><!-- .entry-meta -->
+			<?php if (function_exists('wpmd_is_notphone') && wpmd_is_notphone()) :?>
+				<div class="entry-meta">
+					<?php
+					/* translators: used between list items, there is a space after the comma */
+					$categories_list = get_the_category_list( __( ', ', 'aqua-one' ) );
+					if ( $categories_list && aqua_one_categorized_blog() ) :
+					?>
+					<span class="cat-links">
+						<?php printf( __( '%1$s', 'aqua-one' ), $categories_list ); ?>
+					</span>
+					<?php endif; // End if categories ?>
+				</div><!-- .entry-meta -->
+			<?php endif; // End mobile detect ?>
+
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 

@@ -1,5 +1,5 @@
 p, ul, ol, pre, table, blockquote {
-  margin-top: $base-line-height;
+  //margin-top: $base-line-height;
   margin-bottom: $base-line-height;
 }
 
@@ -18,7 +18,12 @@ blockquote {
 	font-style: italic;
 	font-weight: 300;
 	line-height: 1.2631578947;
-	margin-bottom: 2 * $base-line-height;
+	//margin-bottom: 2 * $base-line-height;
+	margin-bottom: $base-line-height;
+	
+	@include media($lg-mobile) {
+		font-size: 1.1875em;
+	}
 }
 //from twentyfourteen
 blockquote cite,
@@ -54,7 +59,14 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
+	//white space wrap hack
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
+
 
 code, kbd, tt, var {
 	@include font-size(1.5);

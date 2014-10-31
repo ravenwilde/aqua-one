@@ -7,6 +7,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- GENERATED WITH CONTENT-SINGLE.PHP -->
 	<header class="entry-header">
+		<?php aqua_one_post_thumbnail(); ?>
+		
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">

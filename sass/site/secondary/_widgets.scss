@@ -1,12 +1,18 @@
 .widget {
 	padding: golden-ratio(1rem, 1) golden-ratio(1rem, -1);
-	margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1) golden-ratio(1rem, 1) golden-ratio(1rem, -1);
+	margin: 0;
 	background-color: $ghost;
-	box-shadow: 3px 5px 0 transparentize($rangoon-green, .99);
+	font-size: em(14px);
+	line-height: 1.618;
+	word-wrap: break-word;
 
 	/* Make sure select elements fit in widgets */
 	select {
 		max-width: 100%;
+	}
+	@include media($lg-mobile) {
+		margin: golden-ratio(1rem, 1) golden-ratio(1rem, -1) golden-ratio(1rem, 1) golden-ratio(1rem, -1);
+		box-shadow: 3px 5px 0 transparentize($rangoon-green, .99);
 	}
 	@include media($tablet) {
 		margin: golden-ratio(1rem, 1) golden-ratio(1rem, 1) golden-ratio(1rem, 1) golden-ratio(1rem, -1);
@@ -19,9 +25,36 @@
 		padding: golden-ratio(1rem, 1) golden-ratio(1rem, 1);
 		margin: golden-ratio(1rem, 1) golden-ratio(1rem, 1) golden-ratio(1rem, 1) 0;
 	}
+
+	ul {
+		margin: 0;
+		list-style: none;
+	}
+	li {
+		padding: golden-ratio(1rem, -2) golden-ratio(1rem, -1);
+		border-bottom: 1px solid $dawn-grey;
+		&:last-child {
+			border: none;
+		}
+	}
+}
+
+.widget-title {
+	font-size: em(14px);
+	font-weight: 900;
+	line-height: 1.618;
+	text-transform: uppercase;
+	margin: rem(8px) 0;
 }
 
 /* Search widget */
 .widget_search .search-submit {
 	display: none;
+}
+
+/* Recent Posts */
+.widget_recent_entries {
+	li {
+		
+	}
 }

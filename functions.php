@@ -40,6 +40,7 @@ function aqua_one_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 675, 417, true );
+	add_image_size( 'aqua-one-full-width', 1038, 576, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -59,7 +60,7 @@ function aqua_one_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
 	) );
 
 	// Setup the WordPress core custom background feature.
